@@ -1,8 +1,14 @@
+include ../../components/logotype/logotype.pug
+
 <!DOCTYPE html>
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Toxin
+    title Wildlife
   body
-    p Main page
+    .wrapper
+      header
+        +logotype()
+        // +menu([{type:'text',value:'Blog'},{type:'text',value:'Contacts'},{type:'button',value:'',element:'icon-only'},{type:'button',value:'Sing in',element:'ghost'}])
+        

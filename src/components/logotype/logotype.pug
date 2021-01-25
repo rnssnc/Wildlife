@@ -1,0 +1,6 @@
+mixin logotype (options = {})
+  .logotype
+    img(src=require('../../components/logotype/logotype.svg').default, alt="Logotype").logotype__icon  
+    if (!options.icon-only)
+    .logotype__text WILDLIFE
+
