@@ -159,7 +159,8 @@ module.exports = {
         test: /\.(png|jpeg|jpg|svg|gif)$/,
         loader: 'file-loader',
         options: {
-          name: 'images/[name].[fullhash:8].[ext]',
+          publicPath: './',
+          name: 'images/[name].[ext]',
         },
       },
       {
