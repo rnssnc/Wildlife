@@ -1,0 +1,12 @@
+//-
+  options.value - текст
+  options.type - тип ('', 'ghost', 'icon')
+  options.addClass - дополнительный класс
+mixin button(options = {})
+  -
+    var classes =  options.addClass ? options.addClass : ''
+    classes += ' button'
+    classes += options.type ? ' button-' + options.type : ''
+  a(class=classes.trim(), href=options.href)= options.value
+    if (options.type == "icon")
+      span(class=options.icon+'-icon')

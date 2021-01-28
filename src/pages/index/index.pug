@@ -1,14 +1,17 @@
-include ../../components/logotype/logotype.pug
+include ../../components/header/header.pug
+include ../../components/button/button.pug
 
-<!DOCTYPE html>
+<!doctype html>
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Wildlife
   body
-    .wrapper
-      header
-        +logotype()
-        // +menu([{type:'text',value:'Blog'},{type:'text',value:'Contacts'},{type:'button',value:'',element:'icon-only'},{type:'button',value:'Sing in',element:'ghost'}])
-        
+    .survival-wrapper
+      .content-wrapper
+        +header()
+        section.section.section-survival
+          h1.typography-h1 Survival
+          p What this means is that we exist <br> to help protect our environment <br> and do in numbers of ways. You <br> can save the planet by donation.
+          +button({type:'filled',href: '#',value:'Donate'})

@@ -1,0 +1,8 @@
+include ../button/button.pug
+
+mixin navigation(items = [])
+  nav.navigation
+    ul.navigation__list
+      each item in items
+        li.navigation__item
+          +button({value: item.value, href: item.href, addClass: 'navigation__link', type: item.type, icon: item.icon})

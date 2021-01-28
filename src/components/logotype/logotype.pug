@@ -1,5 +1,5 @@
 mixin logotype (options = {})
-  .logotype
+  a(href=options.href).logotype
     img(src=require('../../components/logotype/logotype.svg').default, alt="Logotype").logotype__icon  
     if (!options.icon-only)
     .logotype__text WILDLIFE
