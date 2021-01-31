@@ -5,6 +5,7 @@
   transition: all 0.2s
   text-decoration: none
   font-size: 23px
+  font-weight: 100
 
   &:visited 
     color: $color-font-light
@@ -12,6 +13,9 @@
   &:hover,
   &:focus
     color: $color-main-lighter
+
+  &:active
+    color: $color-main-darker
 
 .button-icon > .find-icon
   display: inline-block
@@ -21,8 +25,16 @@
   -webkit-mask: url(../../assets/icons/find.svg) no-repeat 30% 100%
   mask: url(../../assets/icons/find.svg) no-repeat 100% 100%
 
-.button-icon > span:hover
+.button-icon > span:hover,
+.button-icon:focus > span
   background-color: $color-main-lighter
+
+.button-icon:active > span
+  background-color: $color-main-darker
+
+.button-ghost,
+.button-filled
+  font-family: 'Roboto'
 
 .button-ghost
   display: flex
@@ -33,12 +45,13 @@
   border: 2px solid $color-main;
   box-sizing: border-box;
   border-radius: 5px;
-  font-family: 'Roboto'
 
   &:hover,
   &:focus
     color: white
     background: $color-main
+  &:active
+    background: $color-main-darker
 
 .button-filled
   display: flex
@@ -54,3 +67,5 @@
   &:focus
     color: white
     background: $color-main-lighter
+  &:active
+    background: $color-main-darker

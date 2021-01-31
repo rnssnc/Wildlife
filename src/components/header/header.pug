@@ -2,6 +2,6 @@ include ../logotype/logotype.pug
 include ../navigation/navigation.pug
 
 mixin header()
-  header.header
+  header.header.section
     +logotype({href: '#'})
     +navigation([{href: '#',value:'Blog'},{href: '#',value:'Contacts'},{type:'icon',href: '#',value:'',icon:'find'},{type:'ghost',href: '#',value:'Sign in'}])

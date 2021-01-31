@@ -1,20 +1,79 @@
 @import ../../styles/fonts.sass
 @import ../../styles/variables.sass
 @import ../../styles/global.sass
+@import ../../components/card/card.sass
+
 
 .content-wrapper
-  max-width: 1220px
-  margin: 0 auto
+  max-width: 1460px
   padding-left: 10px
-  padding-right: 10px
+  padding-right: 10px 
+
+.section
+  max-width: 1200px
+  margin: 0 auto
 
 .survival-wrapper
-  height: 780px
   background: #02160b url(../../assets/img/fox.png) no-repeat  
 
 .section-survival
+  margin-top: 120px
   display: flex
   flex-direction: column
   gap: 50px
+  padding-bottom: 240px
+
+.section-survival__about
+  width: 275px
+
+.articles-wrapper
+  background-color: #cccccc
+
+.section-articles
+  display: flex
+  flex-direction: column
+  align-items: center
   padding-top: 120px
+  padding-bottom: 120px
+
+.section-articles__header
+  margin-bottom: 20px
+
+.articles-slider
+  margin-top: 120px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  gap: 60px
+  width: 100%
+
+  &__button-prev,
+  &__button-next
+    width: 29px
+    height: 39px
+    transition: all 0.5s ease
+    cursor: pointer
+    outline: none
+    border: none
+    background-color: transparent
+
+  &__button-prev
+    background: url('../../assets/icons/prev.svg') no-repeat
+  &__button-next
+    background: url('../../assets/icons/next.svg') no-repeat
+    &:hover,
+    &:focus,
+    &:hover,
+    &:focus
+      transform: scale(1.2)
+
+  &__cards
+    width: 1020px
+
+  &__card
+    @include card-styles
+  
+.slick-slide 
+  margin-left: 60px;
 

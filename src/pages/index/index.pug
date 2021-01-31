@@ -1,5 +1,6 @@
 include ../../components/header/header.pug
 include ../../components/button/button.pug
+include ../../components/card/card.pug
 
 <!doctype html>
 html(lang="en")
@@ -8,10 +9,26 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Wildlife
   body
-    .survival-wrapper
-      .content-wrapper
+    main.main
+      .content-wrapper.survival-wrapper
         +header()
         section.section.section-survival
           h1.typography-h1 Survival
-          p What this means is that we exist <br> to help protect our environment <br> and do in numbers of ways. You <br> can save the planet by donation.
+          p.section-survival__about What this means is that we exist to help protect our environment and do in numbers of ways. You can save the planet by donation.
           +button({type:'filled',href: '#',value:'Donate'})
+      .content-wrapper.articles-wrapper
+        section.section.section-articles
+          h2.section-articles__header.typography-h2 Latest articles
+          p.typography-sh2 Breaking news from the wild
+          .articles-slider
+            button.articles-slider__button-prev
+            .articles-slider__cards
+              +card({parent: 'articles-slider', href: '#', src: '../../assets/img/cards/deer.jpg',alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
+              +card({parent: 'articles-slider', href: '#', src: '../../assets/img/cards/squirrel.jpg',alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
+              +card({parent: 'articles-slider', href: '#', src: '../../assets/img/cards/bird.jpg',alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
+              +card({parent: 'articles-slider', href: '#', src: '../../assets/img/cards/deer.jpg',alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
+              +card({parent: 'articles-slider', href: '#', src: '../../assets/img/cards/squirrel.jpg',alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
+              +card({parent: 'articles-slider', href: '#', src: '../../assets/img/cards/bird.jpg',alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
+            button.articles-slider__button-next
+
+          

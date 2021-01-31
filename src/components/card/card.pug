@@ -1,0 +1,5 @@
+mixin card (options)
+  a(class= options.parent + '__card' href=options.href)
+    img(class = options.parent + '__card-image' src=options.src, alt=options.alt)
+    h4(class = options.parent + '__card-header')= options.header
+    p(class = options.parent + '__card-description')= options.description

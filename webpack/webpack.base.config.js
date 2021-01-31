@@ -38,8 +38,6 @@ fs.readdirSync(path.resolve(__dirname, '..', 'src', 'pages'))
     pages.push(file.split('/', 2));
   });
 
-const htmlPlugins = 'a';
-
 const ENTRIES = {};
 pages.forEach((page) => {
   console.log(page);
@@ -50,6 +48,7 @@ pages.forEach((page) => {
 const PATHS = {
   src: path.resolve(__dirname, '..', 'src'),
   dist: path.resolve(__dirname, '..', 'dist'),
+  node: path.resolve(__dirname, '..', 'node_modules'),
 };
 
 module.exports = {
@@ -78,6 +77,7 @@ module.exports = {
   resolve: {
     alias: {
       '@': PATHS.src,
+      '~': PATHS.node,
     },
   },
   plugins: [
