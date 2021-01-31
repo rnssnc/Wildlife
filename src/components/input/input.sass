@@ -1,0 +1,22 @@
+@import '../../styles/variables'
+
+.input__element
+  padding-left: 15px
+  width: 540px
+  height: 60px 
+  border: 1px solid $color-font-grey
+  border-radius: 2px
+  background-color: transparent
+  outline: none
+  font-family: 'Roboto'
+  font-size: 23px
+  color: $color-font-dark
+
+  &::placeholder
+    color: $color-font-grey
+
+  &:hover, &:focus, &--focused
+    border-color: $color-font-dark
+
+.input--no-border-right
+  border-right: none

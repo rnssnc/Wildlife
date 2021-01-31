@@ -1,0 +1,18 @@
+mixin input(options = {})
+  -
+    let inputBaseClass = 'input__element'
+
+    if (options.modifier != '') 
+      inputBaseClass += ' input--' + options.modifier;
+    
+  .input
+    input(
+      class = inputBaseClass
+      type = options.type
+      name = options.name
+      placeholder = options.placeholder
+      pattern = options.pattern
+      tabindex = options.tabindex
+      required = options.required
+      value = options.value
+    )

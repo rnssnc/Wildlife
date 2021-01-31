@@ -1,0 +1,27 @@
+include ../logotype/logotype.pug
+include ../button/button.pug
+
+mixin footer()
+  footer.footer.section
+    +logotype({href: "#"})
+    ul.footer__navigation
+      li.footer__navigation-item
+        +button({addClass:'footer__navigation-link',href: '#',value:'Articles'})
+      li.footer__navigation-item
+        +button({addClass:'footer__navigation-link',href: '#',value:'About us'})
+      li.footer__navigation-item
+        +button({addClass:'footer__navigation-link',href: "#", value:'Learn more'})
+    ul.socials
+      li.socials__item
+        a.socials__link(href="")
+          img(src='../../assets/icons/facebook.svg', alt="")
+      li.socials__item
+        a.socials__link(href="")
+          img(src='../../assets/icons/instagram.svg', alt="")
+      li.socials__item
+        a.socials__link(href="")
+          img(src='../../assets/icons/pinterest.svg', alt="")
+      li.socials__item
+        a.socials__link(href="")
+          img(src='../../assets/icons/telegram.svg', alt="")
+

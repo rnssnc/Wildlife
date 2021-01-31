@@ -1,12 +1,22 @@
 //-
   options.value - текст
   options.type - тип ('', 'ghost', 'icon')
-  options.addClass - дополнительный класс
+  options.modifier - дополнительный класс
+  options.realButton - bool, кнопка или ссылка?
+  options.isSubmit - bull
+  options.form - фарма
 mixin button(options = {})
   -
-    var classes =  options.addClass ? options.addClass : ''
+    var classes = options.addClass ? options.addClass : ''
     classes += ' button'
     classes += options.type ? ' button-' + options.type : ''
-  a(class=classes.trim(), href=options.href)= options.value
-    if (options.type == "icon")
-      span(class=options.icon+'-icon')
+    classes += options.modifier ? ' button--' + options.modifier : ''
+
+  if (options.realButton)
+    button(class=classes.trim() type=options.isSubmit, form=options.form)= options.value
+      if (options.type == "icon")
+        span(class=options.icon+'-icon')
+  else
+    a(class=classes.trim(), href=options.href)= options.value
+      if (options.type == "icon")
+        span(class=options.icon+'-icon')

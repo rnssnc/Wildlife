@@ -5,8 +5,12 @@ import 'slick-carousel/slick/slick-theme.css';
 import './index.sass';
 
 import '../../components/header/header.js';
+import '../../components/footer/footer.js';
 
 import '../../components/card/card.js';
+
+import '../../components/input/input.js';
+
 require('slick-carousel');
 
 $('.articles-slider__cards').slick({
