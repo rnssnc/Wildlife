@@ -15,7 +15,43 @@
   display: flex
   align-items: center
   gap: 27px
+  &__item
+    width: 40px
+    height: 40px
+    background-color: white
+    border-radius: 50%
+    &:hover,
+    &:focus
+      transform: scale(1.1)
 
-  &__link:hover > img,
-  &__link:focus > img
-    transform: scale(1.1)
+.button-icon > .facebook-icon
+  display: inline-block
+  width: 40px
+  height: 40px
+  background-color: #134731
+  -webkit-mask: url(../../assets/icons/facebook.svg) no-repeat 40% 100%
+  mask: url(../../assets/icons/facebook.svg) no-repeat 100% 100%
+
+.button-icon > .instagram-icon
+  display: inline-block
+  width: 40px
+  height: 40px
+  background-color: #134731
+  -webkit-mask: url(../../assets/icons/instagram.svg) no-repeat 40% 100%
+  mask: url(../../assets/icons/instagram.svg) no-repeat 100% 100%
+
+.button-icon > .pinterest-icon
+  display: inline-block
+  width: 40px
+  height: 40px
+  background-color: #134731
+  -webkit-mask: url(../../assets/icons/pinterest.svg) no-repeat 40% 100%
+  mask: url(../../assets/icons/pinterest.svg) no-repeat 100% 100%
+
+.button-icon > .telegram-icon
+  display: inline-block
+  width: 40px
+  height: 40px
+  background-color: #134731
+  -webkit-mask: url(../../assets/icons/telegram.svg) no-repeat 40% 100%
+  mask: url(../../assets/icons/telegram.svg) no-repeat 100% 100%

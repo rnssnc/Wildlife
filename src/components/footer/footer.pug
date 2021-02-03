@@ -13,15 +13,15 @@ mixin footer()
         +button({addClass:'footer__navigation-link',href: "#", value:'Learn more'})
     ul.socials
       li.socials__item
-        a.socials__link(href="")
-          img(src=require('../../assets/icons/facebook.svg').default, alt="")
+        +button({addClass:'socials__link',href: '#',type:'icon',icon:'facebook'})
       li.socials__item
         a.socials__link(href="")
-          img(src=require('../../assets/icons/instagram.svg').default, alt="")
+        +button({addClass:'socials__link',href: '#',type:'icon',icon:'instagram'})
       li.socials__item
         a.socials__link(href="")
-          img(src=require('../../assets/icons/pinterest.svg').default, alt="")
+        +button({addClass:'socials__link',href: '#',type:'icon',icon:'pinterest'})
       li.socials__item
         a.socials__link(href="")
-          img(src=require('../../assets/icons/telegram.svg').default, alt="")
+        +button({addClass:'socials__link',href: '#',type:'icon',icon:'telegram'})
+
 
