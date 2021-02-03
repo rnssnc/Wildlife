@@ -11,32 +11,36 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Wildlife
   body
-    main.main
+    .container.survival-container
       .content-wrapper.survival-wrapper
         +header()
         section.section.section-survival
           h1.typography-h1 Survival
           p.section-survival__about What this means is that we exist to help protect our environment and do in numbers of ways. You can save the planet by donation.
           +button({type:'filled',href: '#',value:'Donate'})
-      .content-wrapper.articles-wrapper
-        section.section.section-articles
-          h2.section-articles__header.typography-h2 Latest articles
-          p.typography-sh2 Breaking news from the wild
-          .articles-slider
-            button.articles-slider__button-prev
-            .articles-slider__cards
-              +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/deer.jpg').default,alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
-              +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/squirrel.jpg').default,alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
-              +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/bird.jpg').default,alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
-              +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/deer.jpg').default,alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
-              +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/squirrel.jpg').default,alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
-              +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/bird.jpg').default,alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
-            button.articles-slider__button-next
-      .content-wrapper.notify-wrapper
-        section.section.section-notify
-          h3.section-notify__header Get notified about new amazing articles
-          form(class="email-notify" action="#", method="get")
-            +input({type: "email",placeholder: "Email",required: true, modifier: 'no-border-right'})
-            +button({realButton: true, type: 'filled', value:'Send', modifier: 'no-border-radius-left button--small-width'})
-      .content-wrapper.footer-wrapper
-        +footer()
+    main.main
+      .container.articles-container
+        .content-wrapper.articles-wrapper
+          section.section.section-articles
+            h2.section-articles__header.typography-h2 Latest articles
+            p.typography-sh2 Breaking news from the wild
+            .articles-slider
+              button.articles-slider__button-prev
+              .articles-slider__cards
+                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/deer.jpg').default,alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
+                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/squirrel.jpg').default,alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
+                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/bird.jpg').default,alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
+                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/deer.jpg').default,alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
+                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/squirrel.jpg').default,alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
+                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/bird.jpg').default,alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
+              button.articles-slider__button-next
+      .container.notify-container
+        .content-wrapper.notify-wrapper
+          section.section.section-notify
+            h3.section-notify__header Get notified about new amazing articles
+            form(class="email-notify" action="#", method="get")
+              +input({type: "email",placeholder: "Email",required: true, modifier: 'no-border-right'})
+              +button({realButton: true, type: 'filled', value:'Send', modifier: 'no-border-radius-left button--small-width'})
+      .container.footer-container
+        .content-wrapper.footer-wrapper
+          +footer()
