@@ -40,7 +40,7 @@ html(lang="en")
             h3.section-notify__header Get notified about new amazing articles
             form(class="email-notify" action="#", method="get")
               +input({type: "email",placeholder: "Email",required: true, modifier: 'no-border-right'})
-              +button({realButton: true, type: 'filled', value:'Send', modifier: 'no-border-radius-left button--small-width'})
+              +button({isInput: true, type: 'filled', value:'Send', modifier: 'no-border-radius-left button--small-width'})
       .container.footer-container
         .content-wrapper.footer-wrapper
           +footer()
