@@ -13,7 +13,10 @@ mixin button(options = {})
     classes += options.modifier ? ' button--' + options.modifier : ''
 
   if (options.isInput)
-    input(class=classes.trim() type=options.isSubmit, form=options.form, value=options.value)
+    if(options.isSub)
+      input(class=classes.trim() type='submit', form=options.form, value=options.value)
+    else
+      input(class=classes.trim() type='submit', form=options.form, value=options.value)
   else
     a(class=classes.trim(), href=options.href)= options.value
       if (options.type == "icon")
