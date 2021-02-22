@@ -14,13 +14,11 @@ import '../../components/input/input.js';
 require('slick-carousel');
 
 $('.articles-slider__cards').slick({
-  autoplay: true,
-  autoplaySpeed: 2500,
   arrows: true,
   nextArrow: '.articles-slider__button-next',
   prevArrow: '.articles-slider__button-prev',
   slidesToShow: 3,
-  variableWidth: true,
+  // variableWidth: true,
   responsive: [
     {
       breakpoint: 1024,

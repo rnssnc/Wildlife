@@ -27,12 +27,18 @@ html(lang="en")
             .articles-slider
               button.articles-slider__button-prev
               .articles-slider__cards
-                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/deer.jpg').default,alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
-                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/squirrel.jpg').default,alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
-                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/bird.jpg').default,alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
-                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/deer.jpg').default,alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
-                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/squirrel.jpg').default,alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
-                +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/bird.jpg').default,alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
+                div.card__wrapper
+                  +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/deer.jpg').default,alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
+                div.card__wrapper
+                  +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/squirrel.jpg').default,alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
+                div.card__wrapper
+                  +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/bird.jpg').default,alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
+                div.card__wrapper 
+                  +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/deer.jpg').default,alt: 'Deer in forest', header: 'Deer', description: 'Naturalist investigation'})
+                div.card__wrapper
+                  +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/squirrel.jpg').default,alt: 'Squirrel in forest', header: 'Squirrel', description: 'Kamikaze squirrels'})
+                div.card__wrapper
+                  +card({parent: 'articles-slider', href: '#', src: require('../../assets/img/cards/bird.jpg').default,alt: 'Bird in forest', header: 'Bird', description: 'Birds Fight club'})
               button.articles-slider__button-next
       .container.notify-container
         .content-wrapper.notify-wrapper
