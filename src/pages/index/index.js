@@ -18,10 +18,9 @@ $('.articles-slider__cards').slick({
   nextArrow: '.articles-slider__button-next',
   prevArrow: '.articles-slider__button-prev',
   slidesToShow: 3,
-  // variableWidth: true,
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1280,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
@@ -29,12 +28,33 @@ $('.articles-slider__cards').slick({
       },
     },
     {
-      breakpoint: 480,
+      breakpoint: 781,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         infinite: true,
+      },
+    },
+    {
+      breakpoint: 521,
+      settings: {
+        arrows: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+        dotsClass: 'dots',
       },
     },
   ],
+});
+
+/* mobile header */
+
+let headerMobile = document.querySelector('.navigation');
+let burger = document.querySelector('.hamburger');
+
+burger.addEventListener('click', () => {
+  burger.classList.toggle('is-active');
+  headerMobile.classList.toggle('navigation-main--active');
 });

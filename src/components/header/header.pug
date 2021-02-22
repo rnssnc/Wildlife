@@ -4,4 +4,7 @@ include ../navigation/navigation.pug
 mixin header()
   header.header.section
     +logotype({href: '#'})
-    +navigation([{href: '#',value:'Blog'},{href: '#',value:'Contacts'},{type:'icon',href: '#',value:'',icon:'find'},{type:'ghost',href: '#',value:'Sign in'}])
+    +navigation([{href: '#',value:'Blog'},{href: '#',value:'Contacts'},{type:'icon',href: '#',value:'',icon:'find'},{type:'ghost',href: '#',value:'Sign in'}],{class: 'navigation-main'})
+    .hamburger.hamburger--squeeze.js-hamburger
+      .hamburger-box
+        .hamburger-inner

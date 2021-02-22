@@ -74,13 +74,31 @@
     transform: scale(1.2)
 
   &__cards
-    width: 1020px
+    max-width: 1020px
 
   &__card
     @include card-styles
-  
-// .slick-slide 
-//   margin-left: 60px;
+
+.dots
+  display: flex
+  justify-content: center
+  gap: 10px
+
+.dots button
+  width: 20px 
+  height: 20px 
+  background: $color-font-grey 
+  border: none
+  border-radius: 50%
+  font-size: 0
+  outline: none
+
+.dots li[class="slick-active"] button
+  background: $color-main-lighter
+
+.dots li
+  list-style-type: none
+
 .slick-list 
   margin-left: -30px
   margin-right: -30px
@@ -106,4 +124,51 @@
   padding-top: 150px
   padding-bottom: 150px
   background: #181617 url('../../assets/img/footer.jpg') no-repeat
+  background-size: cover
   box-shadow: -200px 0 120px -100px #181617 inset, 200px 0 120px -100px #181617 inset
+
+@media screen and (max-width:  1279px)
+  .articles-slider__cards
+    max-width: 680px
+
+@media screen and (max-width:  960px)
+  .section-notify
+    padding-top: 60px
+    padding-bottom: 120px
+  .footer-wrapper
+    padding: 100px 0
+  .footer
+    flex-direction: column
+    gap: 60px
+  
+@media screen and (max-width:  780px)    
+  .section-articles
+    padding-bottom: 55px
+  .articles-slider
+    margin-top: 60px
+  .section-survival
+    align-items: center
+    &__title
+      font-size: 80px
+      font-weight: bold
+    &__about
+      max-width: 400px
+      text-align: center
+  .articles-slider__cards
+    max-width: 300px
+
+@media screen and ( max-width: 520px )
+  .survival-wrapper
+    box-shadow: none
+    backgrond-size: cover
+    background-position: center center  
+
+  .articles-slider__button-prev,
+  .articles-slider__button-next
+    display: none
+  .footer-wrapper
+    box-shadow: -150px 0 120px -100px #181617 inset, 150px 0 120px -100px #181617 inset
+    backgrond-size: cover
+@media screen and (max-width:  360px)
+  .articles-slider__cards
+    max-width: 260px

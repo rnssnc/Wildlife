@@ -1,7 +1,10 @@
 include ../button/button.pug
 
-mixin navigation(items = [])
-  nav.navigation
+mixin navigation(items = [],options = {})
+  -
+    var classes = 'navigation '
+    classes += options.class ? options.class : ''
+  nav(class=classes.trim())
     ul.navigation__list
       each item in items
         li.navigation__item
