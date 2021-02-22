@@ -52,9 +52,9 @@ $('.articles-slider__cards').slick({
 /* mobile header */
 
 let headerMobile = document.querySelector('.navigation');
-let burger = document.querySelector('.hamburger');
+let hamburger = document.querySelector('.hamburger');
 
-burger.addEventListener('click', () => {
-  burger.classList.toggle('is-active');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('is-active');
   headerMobile.classList.toggle('navigation-main--active');
 });

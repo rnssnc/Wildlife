@@ -7,6 +7,9 @@
   justify-content: space-between
 
 .hamburger 
+  position: fixed
+  top: 10px
+  right: 10px
   display: none
   padding: 15px 15px 
   cursor: pointer 
@@ -52,7 +55,7 @@
 .hamburger-box:hover > .hamburger-inner::before,
 .hamburger-box:hover > .hamburger-inner::after 
   background-color: $color-main-lighter
-  
+
 .hamburger-inner::before, .hamburger-inner::after 
   content: "" 
   display: block 
