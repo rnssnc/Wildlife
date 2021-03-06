@@ -55,10 +55,7 @@ module.exports = {
   context: PATHS.src,
   entry: ENTRIES,
   optimization: {
-    minimizer: [
-      new TerserWebpackPlugin({}),
-      new OptimizeCssAssetsWebpackPlugin({}),
-    ],
+    minimizer: [new TerserWebpackPlugin({}), new OptimizeCssAssetsWebpackPlugin({})],
     splitChunks: {
       cacheGroups: {
         commons: {
@@ -102,9 +99,7 @@ module.exports = {
         new HtmlWebpackPlugin({
           getData: () => {
             try {
-              return JSON.parse(
-                fs.readFileSync(`../src/pages/${fileName}/data.json`, 'utf8')
-              );
+              return JSON.parse(fs.readFileSync(`../src/pages/${fileName}/data.json`, 'utf8'));
             } catch (e) {
               console.warn(`data.json was not provided for page ${fileName}`);
               return {};
